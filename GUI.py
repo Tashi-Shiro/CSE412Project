@@ -34,6 +34,7 @@ class MainWindow(QDialog):
         self.ratiobutton.clicked.connect(self.gotoRatio)
         self.stateCountybutton.clicked.connect(self.gotoStateCounty)
         self.vaccineCompletebutton.clicked.connect(self.gotoVaccineComplete)
+        self.VaccBrandCompletebutton.clicked.connect(self.gotoVaccBrandComplete)
 
     def gotoArea(self):
         widget.setCurrentIndex(1)
@@ -55,6 +56,8 @@ class MainWindow(QDialog):
         widget.setCurrentIndex(10)
     def gotoVaccineComplete(self):
         widget.setCurrentIndex(11)
+    def gotoVaccBrandComplete(self):
+        widget.setCurrentIndex(12)
 
 
 
@@ -618,11 +621,14 @@ class VaccineComplete(QDialog):
 
         cur = con.cursor()
         cur.execute('''SELECT "Date", "FIPS", "Complete", "Complete_18Plus", "Complete_65Plus"
-                    FROM "Vaccinations" LIMIT 200''')
+                    FROM "Vaccinations" 
+                    WHERE "FIPS" = 4
+                    OR "FIPS" = 4013
+                    ORDER BY "Date" ASC, "FIPS" ASC ''')
 
         tablerow = 0
         results = cur.fetchall()
-        self.tableWidget.setRowCount(200)
+        self.tableWidget.setRowCount(640)
 
         for row in results:
             self.tableWidget.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(str(row[0])))
@@ -645,26 +651,116 @@ class VaccineComplete(QDialog):
 
         cur = con.cursor()
         cur.execute('''SELECT "Date", "FIPS", "Complete", "Complete_18Plus", "Complete_65Plus"
-                    FROM "Vaccinations" LIMIT 1000''')
+                    FROM "Vaccinations"
+                    WHERE "FIPS" = 4
+                    OR "FIPS" = 4013
+                    ORDER BY "Date" ASC, "FIPS" ASC ''')
         results = cur.fetchall()
 
 
         dateInput = self.lineEdit3_1.text()
-        #fipsInput = self.lineEdit3_2.text()
 
         found = False
 
         for row in results:
             if dateInput == str(row[0]):
                 found = True
-                output = '''Date: %s\nTotal Complete: %s\nComplete Over 18: %s\nComplete Over 65: %s\n'''\
-                        % (row[0], row[2], row[3], row[4])
+                output = "Date: %s\nFIPS(Area): %s\nTotal Complete: %s\nComplete Over 18: %s\nComplete Over 65: %s\n"\
+                        % (row[0], row[1], row[2], row[3], row[4])
                 if found:
                     self.textBrowser3.append(output)
 
         if not found:
             self.textBrowser3.append("Data Not Found...")
 
+
+
+
+
+
+class VaccBrandComplete(QDialog):
+    def __init__(self):
+        super(VaccBrandComplete, self).__init__()
+        loadUi("vaccBrandComplete.ui", self)
+        self.backbutton11.clicked.connect(self.vaccBrandCompleteBack)
+        self.searchbutton4.clicked.connect(self.dataSearch4)
+        self.tableWidget.setColumnWidth(0, 100)
+        self.tableWidget.setColumnWidth(1, 180)
+        self.tableWidget.setColumnWidth(2, 150)
+        self.tableWidget.setColumnWidth(3, 150)
+        self.tableWidget.setColumnWidth(4, 150)
+        self.tableWidget.setColumnWidth(5, 150)
+        self.tableWidget.setColumnWidth(6, 150)
+        self.loadVaccBrandCompleteData()
+
+    def vaccBrandCompleteBack(self):
+        self.lineEdit4.clear()
+        self.textBrowser4.clear()
+        widget.setCurrentIndex(0)
+
+    def loadVaccBrandCompleteData(self):
+        con = psycopg2.connect(
+            host=hostname,
+            database=dbname,
+            user=username,
+            password=pwd,
+            port=port_id)
+
+        cur = con.cursor()
+        cur.execute('''SELECT "Date", "FIPS", "Dist_Total", "Dist_Janssen", "Dist_Moderna", "Dist_Pfizer", "Given_Total"
+                    FROM "State_Vacc_Dist" 
+                    WHERE "FIPS" = 4
+                    ORDER BY "Date" ASC, "FIPS" ASC ''')
+
+        tablerow = 0
+        results = cur.fetchall()
+        self.tableWidget.setRowCount(320)
+
+        for row in results:
+            self.tableWidget.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(str(row[0])))
+            self.tableWidget.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(str(row[1])))
+            self.tableWidget.setItem(tablerow, 2, QtWidgets.QTableWidgetItem(str(row[2])))
+            self.tableWidget.setItem(tablerow, 3, QtWidgets.QTableWidgetItem(str(row[3])))
+            self.tableWidget.setItem(tablerow, 4, QtWidgets.QTableWidgetItem(str(row[4])))
+            self.tableWidget.setItem(tablerow, 5, QtWidgets.QTableWidgetItem(str(row[5])))
+            self.tableWidget.setItem(tablerow, 6, QtWidgets.QTableWidgetItem(str(row[6])))
+            tablerow += 1
+
+
+    def dataSearch4(self):
+        self.textBrowser4.clear()
+
+        con = psycopg2.connect(
+            host=hostname,
+            database=dbname,
+            user=username,
+            password=pwd,
+            port=port_id)
+
+        cur = con.cursor()
+        cur.execute('''SELECT "Date", "FIPS", "Dist_Total", "Dist_Janssen", "Dist_Moderna", "Dist_Pfizer", "Given_Total"
+                    FROM "State_Vacc_Dist" 
+                    WHERE "FIPS" = 4
+                    ORDER BY "Date" ASC, "FIPS" ASC ''')
+        results = cur.fetchall()
+
+
+        dateInput = self.lineEdit4.text()
+
+        found = False
+
+        for row in results:
+            if dateInput == str(row[0]):
+                found = True
+                output = '''
+Date: %s\nFIPS(States): %s\nTotal Complete: %s\nJanssen Complete: %s\nModerna Complete: %s
+Pfizer Complete: %s\nTotal Given: %s\n'''\
+                        % (row[0], row[1], row[2], row[3], row[4], row[5], row[6])
+                if found:
+                    self.textBrowser4.append(output)
+
+        if not found:
+            self.textBrowser4.append("Data Not Found...")
 
 
 
@@ -688,6 +784,7 @@ widget.addWidget(AreaGraph())
 widget.addWidget(PopRatio())
 widget.addWidget(StateCounty())
 widget.addWidget(VaccineComplete())
+widget.addWidget(VaccBrandComplete())
 
 
 widget.setFixedHeight(850)

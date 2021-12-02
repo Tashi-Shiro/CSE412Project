@@ -3,7 +3,7 @@ import psycopg2
 import pyodbc
 
 hostname = "localhost"
-dbname = "test"
+dbname = "postgres"
 username = "postgres"
 pwd = "wyc19990323"
 port_id = 5432

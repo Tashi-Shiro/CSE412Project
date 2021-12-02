@@ -37,13 +37,13 @@ background-color: rgb(255, 222, 222);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>8</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>area</string>
+     <string>Area</string>
     </property>
    </widget>
    <widget class="QPushButton" name="covidbutton">
@@ -57,13 +57,13 @@ background-color: rgb(255, 222, 222);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>8</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>covid</string>
+     <string>Covid</string>
     </property>
    </widget>
    <widget class="QPushButton" name="vaccinebutton">
@@ -77,13 +77,13 @@ background-color: rgb(255, 222, 222);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>8</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>vaccination</string>
+     <string>Vaccination</string>
     </property>
    </widget>
    <widget class="QPushButton" name="statebutton">
@@ -97,13 +97,13 @@ background-color: rgb(255, 222, 222);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>8</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>state</string>
+     <string>State</string>
     </property>
    </widget>
    <widget class="QPushButton" name="countybutton">
@@ -117,13 +117,13 @@ background-color: rgb(255, 222, 222);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>8</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>county</string>
+     <string>County</string>
     </property>
    </widget>
    <widget class="QPushButton" name="popbutton">
@@ -137,13 +137,13 @@ background-color: rgb(255, 222, 222);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>8</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>population</string>
+     <string>Population</string>
     </property>
    </widget>
    <widget class="QPushButton" name="vaccbrandbutton">
@@ -157,7 +157,7 @@ background-color: rgb(255, 222, 222);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>8</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -200,9 +200,9 @@ color: rgb(255, 151, 151);</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -220,9 +220,9 @@ color: rgb(255, 151, 151);</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -276,9 +276,9 @@ color: rgb(255, 151, 151);</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -296,9 +296,9 @@ color: rgb(255, 151, 151);</string>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>937</width>
-    <height>816</height>
+    <width>1102</width>
+    <height>838</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -57,7 +57,7 @@ background-color: rgb(255, 222, 222);</string>
    <property name="geometry">
     <rect>
      <x>410</x>
-     <y>240</y>
+     <y>150</y>
      <width>521</width>
      <height>371</height>
     </rect>
@@ -67,20 +67,20 @@ background-color: rgb(255, 222, 222);</string>
    </property>
    <column>
     <property name="text">
-     <string>Name</string>
+     <string>FIPS</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>Age</string>
+     <string>Name</string>
     </property>
    </column>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>100</y>
+     <x>520</x>
+     <y>40</y>
      <width>311</width>
      <height>91</height>
     </rect>
@@ -96,6 +96,25 @@ color: rgb(255, 151, 151);</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>550</y>
+     <width>591</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Here is displaying the FIPS and Area names from database for 51 states and all 
+the counties belong to their states.</string>
    </property>
   </widget>
  </widget>

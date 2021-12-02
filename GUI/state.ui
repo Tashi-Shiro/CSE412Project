@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>534</width>
-    <height>467</height>
+    <width>1188</width>
+    <height>797</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,7 +30,7 @@ background-color: rgb(255, 222, 222);</string>
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>120</y>
+      <y>40</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -44,7 +44,7 @@ background-color: rgb(255, 222, 222);</string>
    <property name="geometry">
     <rect>
      <x>400</x>
-     <y>200</y>
+     <y>120</y>
      <width>451</width>
      <height>371</height>
     </rect>
@@ -67,7 +67,7 @@ background-color: rgb(255, 222, 222);</string>
    <property name="geometry">
     <rect>
      <x>470</x>
-     <y>90</y>
+     <y>10</y>
      <width>311</width>
      <height>91</height>
     </rect>
@@ -83,6 +83,26 @@ color: rgb(255, 151, 151);</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>500</y>
+     <width>431</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Here is displaying the FIPS and State Abbreviation from 
+database for all the states in the United State.It contains 
+56 states in total.</string>
    </property>
   </widget>
  </widget>

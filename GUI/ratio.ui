@@ -131,6 +131,26 @@ background-color: rgb(255, 222, 222);</string>
     <string>search</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>120</y>
+     <width>441</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Caution: 
+Search the Ratio of Male and Female by inputing the 
+State Abbreviation, please enter right form of Abbreviation</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

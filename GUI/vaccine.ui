@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>910</width>
-    <height>695</height>
+    <width>1273</width>
+    <height>819</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>230</y>
+     <x>270</x>
+     <y>130</y>
      <width>761</width>
      <height>401</height>
     </rect>
@@ -74,8 +74,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>90</y>
+     <x>490</x>
+     <y>10</y>
      <width>311</width>
      <height>91</height>
     </rect>
@@ -109,8 +109,8 @@ background-color: rgb(255, 222, 222);</string>
    <widget class="QPushButton" name="backbutton6">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>120</y>
+      <x>30</x>
+      <y>40</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -119,6 +119,26 @@ background-color: rgb(255, 222, 222);</string>
      <string>Back</string>
     </property>
    </widget>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>550</y>
+     <width>611</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Here is displaying the Date, Age, and serveral ages that take the vaccine 
+from database for all the areas in the United State everyday. 
+Because it contains too much data, so only shows previous 200 rows in the table.</string>
+   </property>
   </widget>
  </widget>
  <resources/>

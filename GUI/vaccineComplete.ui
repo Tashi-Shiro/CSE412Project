@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1095</width>
-    <height>691</height>
+    <width>1243</width>
+    <height>796</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,23 +16,38 @@
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>160</y>
-     <width>571</width>
+     <x>310</x>
+     <y>320</y>
+     <width>641</width>
      <height>401</height>
     </rect>
    </property>
    <property name="columnCount">
-    <number>2</number>
+    <number>5</number>
    </property>
    <column>
     <property name="text">
-     <string>State Abbr</string>
+     <string>Date</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>County</string>
+     <string>FIPS</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Complete</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Complete Over 18</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Complete Over 65</string>
     </property>
    </column>
   </widget>
@@ -49,7 +64,7 @@
     <string notr="true">
 background-color: rgb(255, 222, 222);</string>
    </property>
-   <widget class="QPushButton" name="backbutton9">
+   <widget class="QPushButton" name="backbutton10">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -66,9 +81,9 @@ background-color: rgb(255, 222, 222);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>50</y>
-     <width>481</width>
+     <x>450</x>
+     <y>220</y>
+     <width>351</width>
      <height>91</height>
     </rect>
    </property>
@@ -79,52 +94,55 @@ color: rgb(255, 222, 222);
 color: rgb(255, 151, 151);</string>
    </property>
    <property name="text">
-    <string>View State Belonging Counties</string>
+    <string>View Vaccine Complete</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit2">
+  <widget class="QTextBrowser" name="textBrowser3">
    <property name="geometry">
     <rect>
      <x>230</x>
-     <y>30</y>
-     <width>271</width>
-     <height>51</height>
+     <y>110</y>
+     <width>371</width>
+     <height>101</height>
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="searchButton2">
+  <widget class="QPushButton" name="searchbutton3">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>90</y>
-     <width>111</width>
+     <x>240</x>
+     <y>60</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>search</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit3_1">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>10</y>
+     <width>311</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Search</string>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="textBrowser2">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>150</y>
-     <width>271</width>
-     <height>411</height>
-    </rect>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>570</y>
-     <width>491</width>
-     <height>91</height>
+     <x>620</x>
+     <y>120</y>
+     <width>441</width>
+     <height>81</height>
     </rect>
    </property>
    <property name="font">
@@ -133,9 +151,22 @@ color: rgb(255, 151, 151);</string>
     </font>
    </property>
    <property name="text">
-    <string>Here is searching the counties which belong to a specific state, 
-or searching the states that counties belongs to. Please enter the 
-States and Counties as table shows correctly!</string>
+    <string>Caution: 
+Search the Ratio of Male and Female by inputing the 
+State Abbreviation, please enter right form of Abbreviation</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit3_2">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>10</y>
+     <width>311</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

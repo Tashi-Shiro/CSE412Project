@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>522</width>
-    <height>442</height>
+    <width>1063</width>
+    <height>712</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>200</y>
+     <x>240</x>
+     <y>120</y>
      <width>741</width>
      <height>371</height>
     </rect>
@@ -84,8 +84,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>90</y>
+     <x>400</x>
+     <y>10</y>
      <width>421</width>
      <height>91</height>
     </rect>
@@ -120,7 +120,7 @@ background-color: rgb(255, 222, 222);</string>
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>120</y>
+      <y>30</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -129,6 +129,26 @@ background-color: rgb(255, 222, 222);</string>
      <string>Back</string>
     </property>
    </widget>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>500</y>
+     <width>611</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Here is displaying the Date, FIPS, serveral Vaccine and 
+Brands from database for all the areas in the United State everyday. 
+Because it contains too much data, so only shows previous 200 rows in the table.</string>
+   </property>
   </widget>
  </widget>
  <resources/>

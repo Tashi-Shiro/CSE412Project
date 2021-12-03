@@ -1,4 +1,4 @@
-dbname =test
+dbname = test
 username = postgres
-pwd = 0324
-port_id = 3569
+pwd = 0000
+port_id = 5432

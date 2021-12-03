@@ -1,0 +1,4 @@
+dbname =test
+username = postgres
+pwd = 0324
+port_id = 3569

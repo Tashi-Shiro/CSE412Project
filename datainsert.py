@@ -2,10 +2,14 @@ import pandas as pd
 import psycopg2
 
 hostname = "localhost"
-dbname = "test"
-username = "postgres"
-pwd = "0324"
-port_id = 3569
+
+with open('setting.txt') as setting:
+    lines = setting.readlines()
+
+dbname = lines[0].replace(" ", "").replace("\n", "").split('=')[1]
+username = lines[1].replace(" ", "").replace("\n", "").split('=')[1]
+pwd = lines[2].replace(" ", "").replace("\n", "").split('=')[1]
+port_id = lines[3].replace(" ", "").replace("\n", "").split('=')[1]
 
 try:
     # reading files as csv file

@@ -34,8 +34,8 @@ Set up a new database with any name port, and password in local. Example:
 Before inserting data, update `setting.txt` in the project's main path. To do that,
 open the `setting.txt` and change following information.
 
-    dbname = <input databse name here>
-    username = <input>
+    dbname = <input databse name>
+    username = <input user name>
     password = <your databse password>
     port= <your port ID>
 

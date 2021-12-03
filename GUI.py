@@ -14,8 +14,8 @@ with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-c
 hostname = "localhost"
 dbname = "test"
 username = "postgres"
-pwd = "0324"
-port_id = 3569
+pwd = "wyc19990323"
+port_id = 5432
 
 class MainWindow(QDialog):
     def __init__(self):

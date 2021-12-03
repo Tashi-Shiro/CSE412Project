@@ -103,7 +103,7 @@ color: rgb(255, 151, 151);</string>
   <widget class="QTextBrowser" name="textBrowser3">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>220</x>
      <y>110</y>
      <width>371</width>
      <height>101</height>
@@ -162,8 +162,8 @@ be from 2020-12-14 to 2021-10-28.</string>
    <property name="geometry">
     <rect>
      <x>580</x>
-     <y>0</y>
-     <width>191</width>
+     <y>10</y>
+     <width>341</width>
      <height>51</height>
     </rect>
    </property>
@@ -175,7 +175,8 @@ be from 2020-12-14 to 2021-10-28.</string>
     </font>
    </property>
    <property name="text">
-    <string>Please Enter the Date!</string>
+    <string>Please Enter the Date! 
+(For example, 2020-12-25)</string>
    </property>
   </widget>
  </widget>

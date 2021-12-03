@@ -4,8 +4,8 @@ import psycopg2
 hostname = "localhost"
 dbname = "test"
 username = "postgres"
-pwd = "0324"
-port_id = 3569
+pwd = "wyc19990323"
+port_id = 5432
 
 try:
     # reading files as csv file

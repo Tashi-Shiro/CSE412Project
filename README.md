@@ -8,11 +8,13 @@ local governments, and health departments to provide a complete record of COVID 
 ## Dependencies:
 1. PostgreSQL (v13.5)
 2. Python (v3.8)
-3. Pycharm IDE
+3. PyCharm IDE
    - Psychopg2
    - pandas
    - plotly
 4. Git Bash
+
+If using different version of python, please update project's interpreter in `PyCharm` - `settings` before running anything.
 
 To install any of python's packages, input `pip install packageName` in `Pycharm`'s terminal.
 
@@ -41,7 +43,7 @@ open the `setting.txt` and change following information.
     password = <your databse password>
     port= <your port ID>
 
-After updated data, use the `Pycharm IDE` to run `datainsert.py`.
+After updated data, use the `Pycharm IDE` to run `datainsert.py`. 
 
 #### Important: because we have large datasets, it may take couple minutes to insert all data to database.
 

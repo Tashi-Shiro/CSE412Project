@@ -12,6 +12,7 @@ local governments, and health departments to provide a complete record of COVID 
    - Psychopg2
    - pandas
    - plotly
+   - pyqt5
 4. Git Bash
 
 If using different version of python, please update project's interpreter in `PyCharm` - `settings` before running anything.

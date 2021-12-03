@@ -102,8 +102,6 @@ class Area(QDialog):
             tablerow += 1
 
 
-
-
 class State(QDialog):
     def __init__(self):
         super(State, self).__init__()
@@ -119,11 +117,11 @@ class State(QDialog):
 
     def loadStateData(self):
         con = psycopg2.connect(
-            host=hostname,
-            database=dbname,
-            user=username,
-            password=pwd,
-            port=port_id)
+            host = hostname,
+            database = dbname,
+            user = username,
+            password = pwd,
+            port = port_id)
 
         cur = con.cursor()
         cur.execute('SELECT * FROM "State"')
@@ -136,7 +134,6 @@ class State(QDialog):
             self.tableWidget.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(str(row[0])))
             self.tableWidget.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(str(row[1])))
             tablerow += 1
-
 
 
 class County(QDialog):

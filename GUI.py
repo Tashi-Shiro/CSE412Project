@@ -101,7 +101,6 @@ class Area(QDialog):
             self.tableWidget.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(row[1]))
             tablerow += 1
 
-
 class State(QDialog):
     def __init__(self):
         super(State, self).__init__()

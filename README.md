@@ -1,5 +1,7 @@
 # CSE412 Covid 19 Project
-Our project show information of COVID-19 in the USA.
+The purpose of our project is showing information of COVID-19 in the USA.
+We are committed to collecting a series of data from state, 
+local governments, and health departments to provide a complete record of COVID -19.
 
 # Setup & Installation
 

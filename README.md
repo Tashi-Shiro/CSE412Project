@@ -6,10 +6,10 @@ Our project show information of COVID-19 in the USA.
 ## Dependencies:
 1. PostgreSQL (v13.5)
 2. Python (v3.8)
-    - Psychopg2
-    - pandas
-    - plotly
 3. Pycharm IDE
+   - Psychopg2
+   - pandas
+   - plotly
 4. Git Bash
 
 To install any of python's packages, input `pip install packageName` in `Pycharm`'s terminal.

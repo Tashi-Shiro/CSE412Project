@@ -21,6 +21,7 @@ username = lines[1].replace(" ", "").replace("\n", "").split('=')[1]
 pwd = lines[2].replace(" ", "").replace("\n", "").split('=')[1]
 port_id = lines[3].replace(" ", "").replace("\n", "").split('=')[1]
 
+
 class MainWindow(QDialog):
     def __init__(self):
         super(MainWindow, self).__init__()

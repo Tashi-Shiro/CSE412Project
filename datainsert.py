@@ -11,6 +11,7 @@ username = lines[1].replace(" ", "").replace("\n", "").split('=')[1]
 pwd = lines[2].replace(" ", "").replace("\n", "").split('=')[1]
 port_id = lines[3].replace(" ", "").replace("\n", "").split('=')[1]
 
+
 try:
     # reading files as csv file
     AreaData = pd.read_csv('./data/Area.csv')

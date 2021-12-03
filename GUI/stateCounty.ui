@@ -67,7 +67,7 @@ background-color: rgb(255, 222, 222);</string>
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>50</y>
+     <y>80</y>
      <width>481</width>
      <height>91</height>
     </rect>
@@ -136,6 +136,28 @@ color: rgb(255, 151, 151);</string>
     <string>Here is searching the counties which belong to a specific state, 
 or searching the states that counties belongs to. Please enter the 
 States and Counties as table shows correctly!</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>20</y>
+     <width>451</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Please Enter the State &amp; County Abbreviation! 
+(for example, Enter 'AZ' as Arizona, 
+Maricopa County as Mricopa)</string>
    </property>
   </widget>
  </widget>

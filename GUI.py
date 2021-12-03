@@ -12,10 +12,15 @@ with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-c
     counties = json.load(response)
 
 hostname = "localhost"
-dbname = "test"
-username = "postgres"
-pwd = "wyc19990323"
-port_id = 5432
+
+with open('setting.txt') as setting:
+    lines = setting.readlines()
+
+dbname = lines[0].replace(" ", "").replace("\n", "").split('=')[1]
+username = lines[1].replace(" ", "").replace("\n", "").split('=')[1]
+pwd = lines[2].replace(" ", "").replace("\n", "").split('=')[1]
+port_id = lines[3].replace(" ", "").replace("\n", "").split('=')[1]
+
 
 class MainWindow(QDialog):
     def __init__(self):

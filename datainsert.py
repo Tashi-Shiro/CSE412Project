@@ -1,22 +1,21 @@
 import pandas as pd
 import psycopg2
-import pyodbc
 
 hostname = "localhost"
-dbname = "postgres"
+dbname = "test"
 username = "postgres"
-pwd = "wyc19990323"
-port_id = 5432
+pwd = "0324"
+port_id = 3569
 
 try:
     # reading files as csv file
-    AreaData = pd.read_csv('./Area.csv')
-    StateData = pd.read_csv('./State.csv')
-    CountyData = pd.read_csv('./County.csv')
-    CovidData = pd.read_csv('./Covid_Cases.csv')
-    PopData = pd.read_csv('./population.csv')
-    StateVaccData = pd.read_csv('./State_Vacc_Dist.csv')
-    VaccData = pd.read_csv('./Vaccinations.csv')
+    AreaData = pd.read_csv('./data/Area.csv')
+    StateData = pd.read_csv('./data/State.csv')
+    CountyData = pd.read_csv('./data/County.csv')
+    CovidData = pd.read_csv('./data/Covid_Cases.csv')
+    PopData = pd.read_csv('./data/population.csv')
+    StateVaccData = pd.read_csv('./data/State_Vacc_Dist.csv')
+    VaccData = pd.read_csv('./data/Vaccinations.csv')
 
     # store datasets as dataframe
     dfArea = pd.DataFrame(AreaData)
@@ -233,4 +232,4 @@ finally:
     if(con):
       cur.close()
       con.close()
-      print("PostgreSQL connection is closed")
+      print("Have finished, PostgreSQL connection is closed.")

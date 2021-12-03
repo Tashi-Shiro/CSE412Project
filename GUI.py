@@ -1,5 +1,4 @@
 import sys
-
 from PyQt5.QtCore import QDate
 from PyQt5.uic import loadUi
 import psycopg2
@@ -8,22 +7,20 @@ from PyQt5.QtWidgets import QApplication, QDialog, QLineEdit
 from pandas import DataFrame
 from urllib.request import urlopen
 import plotly.express as px
-import pandas as pd
 import json
 with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
     counties = json.load(response)
 
-
 hostname = "localhost"
-dbname = "postgres"
+dbname = "test"
 username = "postgres"
-pwd = "wyc19990323"
-port_id = 5432
+pwd = "0324"
+port_id = 3569
 
 class MainWindow(QDialog):
     def __init__(self):
         super(MainWindow, self).__init__()
-        loadUi("main.ui", self)
+        loadUi("./GUI/main.ui", self)
         self.areabutton.clicked.connect(self.gotoArea)
         self.statebutton.clicked.connect(self.gotoState)
         self.countybutton.clicked.connect(self.gotoCounty)
@@ -60,12 +57,10 @@ class MainWindow(QDialog):
         widget.setCurrentIndex(12)
 
 
-
-
 class Area(QDialog):
     def __init__(self):
         super(Area, self).__init__()
-        loadUi("area.ui", self)
+        loadUi("./GUI/area.ui", self)
         self.backbutton1.clicked.connect(self.areaBack)
         self.Graph1.clicked.connect(self.gotoGraph1)
         self.tableWidget.setColumnWidth(0, 150)
@@ -107,7 +102,7 @@ class Area(QDialog):
 class State(QDialog):
     def __init__(self):
         super(State, self).__init__()
-        loadUi("state.ui", self)
+        loadUi("./GUI/state.ui", self)
         self.backbutton2.clicked.connect(self.stateBack)
         self.tableWidget.setColumnWidth(0, 150)
         self.tableWidget.setColumnWidth(1, 200)
@@ -142,7 +137,7 @@ class State(QDialog):
 class County(QDialog):
     def __init__(self):
         super(County, self).__init__()
-        loadUi("county.ui", self)
+        loadUi("./GUI/county.ui", self)
         self.backbutton3.clicked.connect(self.countyBack)
         self.tableWidget.setColumnWidth(0, 150)
         self.loadCountyData()
@@ -174,7 +169,7 @@ class County(QDialog):
 class Population(QDialog):
     def __init__(self):
         super(Population, self).__init__()
-        loadUi("population.ui", self)
+        loadUi("./GUI/population.ui", self)
         self.backbutton4.clicked.connect(self.popBack)
         self.tableWidget.setColumnWidth(0, 50)
         self.tableWidget.setColumnWidth(0, 150)
@@ -220,7 +215,7 @@ class Population(QDialog):
 class Covid(QDialog):
     def __init__(self):
         super(Covid, self).__init__()
-        loadUi("covid.ui", self)
+        loadUi("./GUI/covid.ui", self)
         self.backbutton5.clicked.connect(self.covidBack)
         self.tableWidget.setColumnWidth(0, 300)
         self.tableWidget.setColumnWidth(1, 150)
@@ -258,7 +253,7 @@ class Covid(QDialog):
 class Vaccine(QDialog):
     def __init__(self):
         super(Vaccine, self).__init__()
-        loadUi("Vaccine.ui", self)
+        loadUi("./GUI/Vaccine.ui", self)
         self.backbutton6.clicked.connect(self.vaccineBack)
         self.tableWidget.setColumnWidth(0, 200)
         self.tableWidget.setColumnWidth(1, 80)
@@ -308,7 +303,7 @@ class Vaccine(QDialog):
 class VaccBrand(QDialog):
     def __init__(self):
         super(VaccBrand, self).__init__()
-        loadUi("vaccbrand.ui", self)
+        loadUi("./GUI/vaccbrand.ui", self)
         self.backbutton7.clicked.connect(self.vaccBrandBack)
         self.tableWidget.setColumnWidth(0, 200)
         self.tableWidget.setColumnWidth(1, 80)
@@ -360,7 +355,7 @@ class VaccBrand(QDialog):
 class AreaGraph(QDialog):
     def __init__(self):
         super(AreaGraph, self).__init__()
-        loadUi("AreaGraph.ui", self)
+        loadUi("./GUI/AreaGraph.ui", self)
         self.graphBack1.clicked.connect(self.GraphBack1)
         self.graphButton1.clicked.connect(self.showGraph)
         self.dateEdit.setMinimumDate(QDate(2020, 1, 1))
@@ -442,7 +437,7 @@ class AreaGraph(QDialog):
 class PopRatio(QDialog):
     def __init__(self):
         super(PopRatio, self).__init__()
-        loadUi("ratio.ui", self)
+        loadUi("./GUI/ratio.ui", self)
         self.backbutton8.clicked.connect(self.ratioBack)
         self.searchbutton.clicked.connect(self.dataSearch)
         self.tableWidget.setColumnWidth(0, 100)
@@ -517,7 +512,7 @@ class PopRatio(QDialog):
 class StateCounty(QDialog):
     def __init__(self):
         super(StateCounty, self).__init__()
-        loadUi("stateCounty.ui", self)
+        loadUi("./GUI/stateCounty.ui", self)
         self.backbutton9.clicked.connect(self.statcountyBack)
         self.searchButton2.clicked.connect(self.dataSearch2)
         self.tableWidget.setColumnWidth(0, 200)
@@ -596,7 +591,7 @@ class StateCounty(QDialog):
 class VaccineComplete(QDialog):
     def __init__(self):
         super(VaccineComplete, self).__init__()
-        loadUi("vaccineComplete.ui", self)
+        loadUi("./GUI/vaccineComplete.ui", self)
         self.backbutton10.clicked.connect(self.vaccineCompleteBack)
         self.searchbutton3.clicked.connect(self.dataSearch3)
         self.tableWidget.setColumnWidth(0, 100)
@@ -681,7 +676,7 @@ class VaccineComplete(QDialog):
 class VaccBrandComplete(QDialog):
     def __init__(self):
         super(VaccBrandComplete, self).__init__()
-        loadUi("vaccBrandComplete.ui", self)
+        loadUi("./GUI/vaccBrandComplete.ui", self)
         self.backbutton11.clicked.connect(self.vaccBrandCompleteBack)
         self.searchbutton4.clicked.connect(self.dataSearch4)
         self.tableWidget.setColumnWidth(0, 100)
@@ -761,11 +756,6 @@ Pfizer Complete: %s\nTotal Given: %s\n'''\
 
         if not found:
             self.textBrowser4.append("Data Not Found...")
-
-
-
-
-
 
 
 app = QApplication(sys.argv)

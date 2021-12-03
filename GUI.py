@@ -776,7 +776,7 @@ widget.addWidget(StateCounty())
 widget.addWidget(VaccineComplete())
 widget.addWidget(VaccBrandComplete())
 
-
+widget.setWindowTitle("CSE 412 Covid-19 Database")
 widget.setFixedHeight(850)
 widget.setFixedWidth(1120)
 widget.show()
